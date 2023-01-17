@@ -25,7 +25,6 @@ html {
     font-size: 10px;
 }
 
-
 body {
     font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
@@ -35,6 +34,7 @@ body {
     color: $light-grey;
     overflow-x: hidden;
 }
+
 .container {
     width: 1140px;
     margin: 0 auto; //390px;
@@ -49,7 +49,6 @@ body {
     padding-left: 12px;
     display: inline-block;
 }
-
 .header {
     position: -webkit-sticky;
     position: sticky;
@@ -60,13 +59,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // padding: 33px 390px 60px;
-    //custom
-    margin: 0 auto; //custom
-    height: 104px; //custom
+    margin: 0 auto; 
+    height: 104px; 
     &__navigation {
         flex-grow: 1;   
-        // padding-top: 34px; //custom
     }
     &__nav {
             display: flex;
@@ -87,32 +83,27 @@ body {
     }
     &__tel {
         padding-right: 13px;
-        // padding-top: 36px;
         border-right: 1px solid $light-grey;
         box-sizing: border-box;
     }
     &__mail {
         padding-left: 13px;
-        // padding-top: 36px;
     }
 }
-
 .profile {
     position: relative;
-    padding-top: 2rem; //custom
+    padding-top: 2rem; 
     &__info {
         padding-top: 10rem;
         padding-bottom: 4.5rem;
         border-bottom: $line;
-
     }   
     &__contact {
         padding-top: 4.9rem;
         display: flex;
         justify-content: space-between;
         text-align:justify;
-        align-items: baseline;
-        
+        align-items: baseline;  
     }
     &__name {
         font-size: 2.8rem;
@@ -147,7 +138,6 @@ body {
             top: -161px;
             z-index: -1;
         }
-      
     }
     &__link {
         font-size: 1.6rem;
@@ -178,11 +168,12 @@ body {
         }
     }
     &__social {
-        display: flex;
+            display: flex;
             list-style-type: none;
             margin: 0;
             padding-left: 0;
             gap: 28px;
+            position: relative;
             &::before {
                 content: '';
                 position: absolute;
@@ -191,9 +182,8 @@ body {
                 border-radius: 100%;
                 background: $red;
                 z-index: -1;
-                right: 26.5%;
-                bottom: 3%;
-                
+                right: 14.5%;
+                bottom: -181%;  
             }
             &_ig {
                 border-left: 1px solid $light-grey;
@@ -201,16 +191,6 @@ body {
                 padding: 0 26px;
             }
     }
-    
-    // &__ellipse_s {
-    //     position: absolute;
-    //     width: 106px;
-    //     height: 106px;
-    //     top: 673px;
-    //     z-index: -1;
-    //     right: 406px;
-    // }
-   
 }
 .about {
     padding-top: 47px;
@@ -287,9 +267,6 @@ body {
     &_2{
         padding: 23px 0px;
     }
-    &__center {
-        // padding-top: 10px;
-    }
 }
 .portfolio {
     
@@ -307,7 +284,6 @@ body {
     font-weight: 700;
     line-height: 90px;
     text-transform: uppercase;
-    // position: relative;
     z-index: 1;
     &::after {
         content: "";
@@ -334,35 +310,13 @@ body {
     &__example {
         padding-bottom:5.4rem;
         border-bottom: $line;
-        // &:nth-child(n+1) {
-        //     padding-top: 60px;
-        // }
     }
-    // &__ellipse {
-    //     position: absolute;
-    //     width: 465px;
-    //     height: 465px;
-    //     left: 745px;
-    //     top: 2361px;
-    //     z-index: -1;
-    //         }
-   
 }
 .gradient {
     background: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
     background-size: cover;
     z-index: -1;
-    // z-index: -99;
     margin-top: -60px;
-    // z-index: -2;
-    // &__ellipse {
-    //     position: absolute;
-    //     width: 465px;
-    //     height: 465px;
-    //     left: 745px;
-    //     top: 2361px;
-    //     z-index: -2;
-    //         }
 }
 .example {
     &_2 {
@@ -504,6 +458,7 @@ body {
             letter-spacing: 0.03em;
             text-transform: uppercase; 
             padding-top: 5px;
+            position: relative;
             &::before {
                 content: '';
                 position: absolute;
@@ -512,8 +467,8 @@ body {
                 border-radius: 100%;
                 background: $red;
                 z-index: -1;
-                left: 16%;
-                bottom: -293%;
+                left: -52%;
+                bottom: -106%;
                 
             }
         }
@@ -549,6 +504,7 @@ body {
         font-size: 4.2rem;
         line-height: 150%;
         &_1 {
+            position: relative;
             &::before {
                 content: '';
                 position: absolute;
@@ -557,12 +513,12 @@ body {
                 border-radius: 100%;
                 background: $red;
                 z-index: -1;
-                left: 48%;
-                bottom: -330%;
-                
+                left: -8%;
+                bottom: -19%;
             }
         }
         &_2 {
+            position: relative;
             &::before {
                 content: '';
                 position: absolute;
@@ -571,9 +527,8 @@ body {
                 border-radius: 100%;
                 background: $red;
                 z-index: -1;
-                left: 48%;
-                top: 480%;
-                
+                left: -8%;
+                top: -28%;
             }
         }
     }
@@ -590,31 +545,7 @@ body {
         font-size: 1.6rem;
         line-height: 200%;
         opacity: .8;
-    }
-    // &__ellipse_l {
-    //     position: absolute;
-    //     width: 140px;
-    //     height: 140px;
-    //     left: 910px;
-    //     top: 5382px;
-    //     z-index: -1;
-    //         }
-    //  &__ellipse_s {
-    //     position: absolute;
-    //     width: 90px;
-    //     height: 90px;
-    //     left: 932px;
-    //     top: 5373px;
-    //     z-index: -1;
-    //         }   
-    //  &__ellipse_s2 {
-    //     position: absolute;
-    //     width: 90px;
-    //     height: 90px;
-    //     left: 911px;
-    //     top: 6108px;       
-    //     z-index: -1;
-    //         }      
+    }    
 }
 .contact {
     padding-top: 53px;
@@ -655,6 +586,7 @@ body {
             letter-spacing: 0.03em;
             text-transform: uppercase; 
             padding-top: 5px;
+            position: relative;
         &::before {
             content: '';
             position: absolute;
@@ -663,36 +595,19 @@ body {
             border-radius: 100%;
             background: $red;
             z-index: -2;
-            left: 12%;
-            top: 498%;
+            left: -53%;
+            top: -25%;
         }
         &::after {
             content: '';
             position: absolute;
             border: 35px solid rgba(0, 0, 0, 0);
             border-bottom: 68px solid #F3F2F0;
-            left: 10.3%;
+            left: -62%;
             z-index: -1;
-            top: 500%;
+            top: -3%;
         }
     }
-    // &__ellipse {
-    //     position: absolute;
-    //     width: 300px;
-    //     height: 300px;
-    //     left: 224px;
-    //     top: 6333px;
-    //     z-index: -1;
-    //         }
-    // &__triangle {
-    //     position: absolute;
-    //     width: 67px;
-    //     height: 71px;
-    //     left: 198px;
-    //     top: 6387px;;
-    //     z-index: -1;
-    //         }        
-
 }
 .box {
     flex-basis: 49%;
@@ -710,18 +625,15 @@ body {
         display: block;
         background-color: #38383a; 
         width: 93%;
-        padding: 0.1rem 2rem; //2.4rem 2rem;
+        padding: 0.1rem 2rem; 
         height: 62px;
         margin-top: -2px;
         border: none;
-        // &::placeholder {
-            padding-left: 20px;
+        padding-left: 20px;
         font-weight: 400;
         font-size: 1.2rem;
         line-height: 150%;
-        color: $white; 
-        // }
-        
+        color: $white;  
     }
 }
 
@@ -757,7 +669,6 @@ body {
         line-height: 150%;
         color: $light-grey;
     }
-
 }
 .drop{
     width: 523px;
@@ -796,7 +707,6 @@ body {
         margin-top: -24px;
         li:first-of-type {
             opacity: 1;
-            
         }
       }
     }
@@ -903,7 +813,6 @@ body {
             color: $red;
             text-decoration: none;
         }
-        
         &_tel {
             border-right: 1px solid rgba($light-grey, .2);
             box-sizing: border-box;
@@ -923,12 +832,6 @@ body {
         // opacity: .3;
         color: #535254;
     }
-    // &__mark, &__author {
-    //     font-weight: 400;
-    //     font-size: 1.2rem;
-    //     line-height: 150%;
-    //     opacity: .3;
-    // }
     &__author_link {
         font-weight: 400;
         font-size: 1.2rem;
