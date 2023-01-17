@@ -9,6 +9,7 @@
 <body>
     <!-- <div class="main"> -->
         <header class="header">
+            <!-- <div class="header__sticky"> -->
             <nav class="header__navigation">
                 <ul class="header__nav">
                     <li class="header__item">
@@ -30,6 +31,7 @@
             </nav>
             <a href="tel:+79237777777" class="header__tel header__link">8 923 777-77-77</a>
             <a href="mailto:alexdev@gmail.com" class="header__mail header__link">alexdev@gmail.com</a>
+        <!-- </div> -->
         </header>             
 <!-- </div>    -->
 <section class="profile">
@@ -51,9 +53,6 @@
             </ul>
            </div>
         </div>
-        <img class="profile__ellipse_l" src="./images/profile_ellipse_l.svg" alt="">
-        <img class="profile__ellipse_s" src="./images/profile_ellipse_s.png" alt="">
-        <img class="profile__triangle" src="./images/profile_triangle.png" alt="">
     </div>
     
 </section>
@@ -257,7 +256,7 @@
                     <li class="prices__item">Одна посадочная страница</li>
                     <li class="prices__item">От 7 дней</li>
                 </ul>
-                <p class="prices__price">От 7 000 Р</p>
+                <p class="prices__price prices__price_1">От 7 000 Р</p>
             </div>            
         </div>
         <div class="prices__block prices__corp">
@@ -293,18 +292,15 @@
                     <li class="prices__item">От 2-10 страниц, корзина, карточка товара</li>
                     <li class="prices__item">От 20 дней</li>
                 </ul>
-                <p class="prices__price">От 15 000 Р</p>
+                <p class="prices__price prices__price_2"">От 15 000 Р</p>
             </div>
         </div>    
-        <img class="prices__ellipse_l" src="./images/price_ellipse_l.png" alt=""> 
-        <img class="prices__ellipse_s" src="./images/price_ellipse_s.png" alt=""> 
-        <img class="prices__ellipse_s2" src="./images/price_ellipse_s.png" alt=""> 
     </div>
 </section>
 <section class="contact">
     <div class="container contact_div">
         <div class="prices__block prices__block_h  prices__block_h_c">
-            <h2 class="prices__tittle_l">Расскажите<br>о своем проекте</h3>
+            <h2 class="contact__tittle">Расскажите<br>о своем проекте</h3>
             <p class="prices__description">Воспользуйтесь формой обратной<br>связи, чтобы обсудить ваш проект,<br>заполните все поля, и я свяжусь<br>с вами в ближайшее время</p>
         </div>
         <div class="contact__ways">
@@ -321,8 +317,10 @@
                 <div class="form">
                     <label class="drop">
                         <input type="checkbox" id="drop__connect">
-                        <span class="control">Telegram</span> 
+                        <span class="control">Telegram</span>
+                        <img class="arrow_down" src="./images/arrow_down.svg" alt=""> 
                         <ul class="drop__list">
+                            <img class="arrow_up" src="./images/arrow_up.svg" alt="">
                             <li class="drop__item">Telegram</li>
                             <li class="drop__item">WhatsApp</li>
                             <li class="drop__item">Звонок на телефон</li>
@@ -334,8 +332,8 @@
                 <input type="submit" class="form__sub">
             </div>
         </div>
-        <img class="contact__ellipse" src="./images/contact_ellipse.png" alt="">
-        <img class="contact__triangle" src="./images/contact_triangle.png" alt="">
+        <!-- <img class="contact__ellipse" src="./images/contact_ellipse.png" alt="">
+        <img class="contact__triangle" src="./images/contact_triangle.png" alt=""> -->
     </div>
 </section>
 <footer>
@@ -349,13 +347,13 @@
             <li><a class="footer__link" href="#">Обратная связь</a></li>
         </ul>
         <div class="footer__connect">
-            <a class="footer__contact footer__contact_tel" href="">8 923 777-77-77</a>
-            <a class="footer__contact footer__contact_mail" href="">alexdev@gmail.com</a>
+            <a class="footer__contact footer__contact_tel" href="tel:+79237777777">8 923 777-77-77</a>
+            <a class="footer__contact footer__contact_mail" href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
         </div>
     </div>
     <div class="footer__copy">
         <p class="footer__mark">© 2020, Все права защищены</p>
-        <p class="footer__author">Сделано в рамках курса учебной платформы <a href="" class="footer__author_link">Annblok</a></p>
+        <p class="footer__author">Сделано в рамках курса учебной платформы <a href="" class="footer__author_link">Annblok</a></p> 
     </div>
 </div>
 </footer>
