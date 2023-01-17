@@ -76,6 +76,7 @@ body {
     margin: 0 390px;
 }
 .profile {
+    position: relative;
     &__info {
         padding-top: 10rem;
         padding-bottom: 4.5rem;
@@ -142,6 +143,33 @@ body {
                 padding: 0 26px;
             }
     }
+    &__ellipse_l {
+        position: absolute;
+        width: 253px;
+        height: 253px;
+        left: 263px;
+        top: 373px;
+        
+        z-index: -2;
+    }
+    &__ellipse_s {
+        position: absolute;
+        width: 106px;
+        height: 106px;
+        left: 1386px;
+        top: 650px;
+        
+        z-index: -1;
+    }
+    &__triangle {
+        position: absolute;
+        width: 70px;
+        height: 75px;
+        left: 236px;
+        top: 409px;
+    
+        z-index: -1;
+    }
 
 }
 .about {
@@ -195,6 +223,7 @@ body {
     }
 }   
 .stages {
+    margin-bottom: 180px;
     &__grid {
         display: grid;
         grid-template-columns: 72px 509px 560px; //1fr 2fr 3fr;
@@ -223,13 +252,40 @@ body {
     }
 }
 .portfolio {
+    
+    &__tittle-back {
+        background-color: $dark-grey;
+        padding-bottom: 8.5rem;
+        z-index: 1;
+    }
     &__tittle {
-    padding-top: 18rem;
-    padding-bottom: 20.5rem;
+        position: relative;
+        display: inline-block;
+  
+   
     font-size: 7.4rem;
     font-weight: 700;
     line-height: 90px;
     text-transform: uppercase;
+    // position: relative;
+    z-index: 1;
+    &::after {
+        content: "";
+        width: 465px;
+        height: 465px;
+        border-radius: 100%;
+        background: $red;
+        position: absolute;
+        top: -102%;
+        right: -63%;
+        z-index: -1;
+    }
+    }
+    
+    &__list {
+        padding-top: 56px; 
+        z-index: 1;  
+        position: relative;
     }
     &__example {
         display: flex;
@@ -242,7 +298,31 @@ body {
         //     padding-top: 60px;
         // }
     }
+    // &__ellipse {
+    //     position: absolute;
+    //     width: 465px;
+    //     height: 465px;
+    //     left: 745px;
+    //     top: 2361px;
+    //     z-index: -1;
+    //         }
    
+}
+.gradient {
+    background: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
+    background-size: cover;
+    z-index: -1;
+    // z-index: -99;
+    margin-top: -60px;
+    // z-index: -2;
+    // &__ellipse {
+    //     position: absolute;
+    //     width: 465px;
+    //     height: 465px;
+    //     left: 745px;
+    //     top: 2361px;
+    //     z-index: -2;
+    //         }
 }
 .example {
     &_2 {
@@ -427,6 +507,30 @@ body {
         line-height: 200%;
         opacity: .8;
     }
+    &__ellipse_l {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        left: 330px;
+        top: 4849px;
+        z-index: -1;
+            }
+     &__ellipse_s {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        left: 932px;
+        top: 5373px;
+        z-index: -1;
+            }   
+     &__ellipse_s2 {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        left: 935px;
+        top: 6099px;    
+        z-index: -1;
+            }      
 }
 .contact {
     padding-top: 53px;
@@ -459,6 +563,22 @@ body {
             text-decoration: none;
         }
     }
+    &__ellipse {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        left: 245px;
+        top: 6326px;
+        z-index: -1;
+            }
+    &__triangle {
+        position: absolute;
+        width: 67px;
+        height: 71px;
+        left: 219px;
+        top: 6379px;
+        z-index: -1;
+            }        
 
 }
 .box {
