@@ -32,7 +32,11 @@
         </header>             
 <section class="profile">
     <div class="container">
-         <img class="profile__photo" src="./images/photo_main.png" alt="">
+        <div class="profile__picture">
+            <!-- <source media="(max-width:1920px)" srcset="./images/photo_main.png">
+            <source media="(max-width:1280px)" srcset="./images/photo_main_900.png">
+         <img class="profile__photo" alt="" src="./images/photo_main.png"> -->
+        </div>
         <div class="profile__info">
            <p class="profile__name">Александр Антропов</p> 
            <p class="profile__role">web-разработчик</p>
@@ -100,16 +104,20 @@
 </section>
 <section class="stages">
     <div class="container">
-        <div class="stages__grid">  
-            <div class="stages__num stages_1">01</div>
-            <div class="stages__tittle stages_1">Вы заказываете сайт</div>
-            <div class="stages__description stages_1">Связываетесь со мной по телефону или через заявку на сайте</div>
-            <div class="stages__num stages_2">02</div>
-            <div class="stages__tittle stages_2">Обговариваем детали</div>
-            <div class="stages__description stages_2"><p class="stages__center"></p>Созваниваемся или списываемся любым удобным для вас способом</p></div>
-            <div class="stages__num stages_3">03</div>
-            <div class="stages__tittle stages_3">Этап программирования</div>
-            <div class="stages__description stages_3">Верстаю сайт по вашему проекту пиксель в пиксель</div>
+        <div class="stages__grid stages__grid_border">  
+            <div class="stages__num">01</div>
+            <div class="stages__tittle">Вы заказываете сайт</div>
+            <div class="stages__description">Связываетесь со мной по телефону или через заявку на сайте</div>
+         </div>
+         <div class="stages__grid">  
+            <div class="stages__num">02</div>
+            <div class="stages__tittle">Обговариваем детали</div>
+            <div class="stages__description"><p class="stages__center"></p>Созваниваемся или списываемся любым удобным для вас способом</p></div>
+        </div> 
+        <div class="stages__grid stages__grid_border">
+            <div class="stages__num">03</div>
+            <div class="stages__tittle">Этап программирования</div>
+            <div class="stages__description">Верстаю сайт по вашему проекту пиксель в пиксель</div>
         </div> 
     </div>
 </section> 
