@@ -11,6 +11,7 @@ $r_minmob: 320px;
 $r_mob360: 360px;
 $r_mob400: 400px;
 $r_mob500: 500px;
+$r_tab_650: 650px;
 $r_tab: 768px;
 $r_tab_900: 900px;
 $r_desk: 1000px;
@@ -41,6 +42,12 @@ body {
     @media (max-width: $r_desk_1280) {
         width: 900px;
     }
+    @media (max-width: $r_desk) {
+        width: 700px;
+    }
+    @media (max-width: $r_tab) {
+        width: 600px;
+    }
 }
 
 .tittle {
@@ -67,8 +74,15 @@ body {
     @media (max-width: $r_desk_1280) {
         width: 900px;
     }
+    @media (max-width: $r_desk) {
+        width: 700px;
+    }
+    @media (max-width: $r_tab) {
+        width: 600px;
+    }
     &__navigation {
         flex-grow: 1;   
+        
     }
     &__nav {
             display: flex;
@@ -76,12 +90,18 @@ body {
             margin: 0;
             padding-left: 0;
             gap: 28px;
+            @media (max-width: $r_desk) {
+                display: none;
+            }
     }
     &__link {
         text-decoration: none;
         color: $light-grey;
         cursor: pointer;
         transition: .3s;
+        @media (max-width: $r_desk) {
+            font-size: 2rem;
+        }
         &:hover {
             color: $red;
             text-decoration: none;
@@ -94,6 +114,24 @@ body {
     }
     &__mail {
         padding-left: 13px;
+    }
+    &__menu {
+        display: none;
+        @media (max-width: $r_desk) {
+            display: block;
+            width: 34px;
+            height: 34px;
+            background-image: url(../images/menu.svg);
+            background-color: $dark-grey;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 34px 30px;
+            position: relative;
+            border: none;
+            padding: 0;
+            transition: .2s;
+               }
+
     }
 }
 .profile {
@@ -115,11 +153,21 @@ body {
             background-image: url(../images/photo_main_900.png);
             width: 900px;
         }
+        @media (max-width: $r_desk) {
+            background-image: url(../images/photo_main_700.png);
+            width: 700px;
+        }
+        @media (max-width: $r_tab) {
+            width: 600px;
+        }
     }
     &__info {
         padding-top: 10rem;
         padding-bottom: 4.5rem;
         border-bottom: $line;
+        @media (max-width: $r_tab) {
+            padding-top: 7rem;
+        }
     }   
     &__contact {
         padding-top: 4.9rem;
@@ -127,6 +175,9 @@ body {
         justify-content: space-between;
         text-align:justify;
         align-items: baseline;  
+        @media (max-width: $r_desk) {
+            padding-top: 8.9rem;
+        }
     }
     &__name {
         font-size: 2.8rem;
@@ -146,6 +197,9 @@ body {
     @media (max-width: $r_desk_1280) {
         font-size: 6.5rem;
     } 
+    @media (max-width: $r_desk) {
+        font-size: 5.5rem;
+    }
         &::before {
             content: '';
             position: absolute;
@@ -156,9 +210,9 @@ body {
             z-index: -2;
             left: -11%;
             bottom: -327%;
-            @media (max-width: $r_desk_1450) {
-                left: 3%;
-            }
+            // @media (max-width: $r_desk_1450) {
+            //     left: 3%;
+            // }
             
         }
         &::after {
@@ -170,12 +224,15 @@ body {
             top: -161px;
             z-index: -1;
             @media (max-width: $r_desk_1580) {
-                left: 49px;
-                top: -219px;
-            }
-            @media (max-width: $r_desk_1450) {
-                visibility: hidden;
-            }
+                    left: 2px;
+                    top: 25px;
+                     }
+             @media (max-width: $r_desk_1280) {
+                border: 27px solid rgba(0, 0, 0, 0);
+                border-bottom: 62px solid #F3F2F0;
+                left: 8px;
+                top: 39px;
+                     }
         }
     }
     &__link {
@@ -186,6 +243,9 @@ body {
         font-weight: 700;
         position: relative;
         transition: .3s;
+        @media (max-width: $r_desk) {
+            font-size: 2.1rem;
+        }
         &:hover {
             color: $light-grey;
             text-decoration: none;
@@ -237,6 +297,10 @@ body {
     display: flex;
     justify-content: space-around;
     gap: 4rem;
+    @media (max-width: $r_tab) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+             }
     }
     &__personal {
         padding-bottom: 8.5rem;
@@ -249,7 +313,13 @@ body {
             gap: 0;
             padding-top: 11rem;
         }
-        
+        @media (max-width: $r_desk) {
+            display: flex;
+            flex-direction: column;
+        }
+        @media (max-width: $r_desk_1280) {
+            padding-top: 8rem;
+        }
     }
     &__tittle {
         font-size: 2.8rem;
@@ -270,6 +340,9 @@ body {
         @media (max-width: $r_desk_1280) {
             flex-basis: 123%;
             font-size: 2.5rem;
+        }
+        @media (max-width: $r_desk_1280) {
+            font-size: 2.8rem;
         }
         &_s {
             opacity: .8;
@@ -300,13 +373,24 @@ body {
     @media (max-width: $r_desk_1280) {
         margin-bottom: 16rem;
     }
+    @media (max-width: $r_tab_900) {
+        margin-bottom: 13rem;
+    }
     &__grid {
         display: grid;
         grid-template-columns: 72px 509px 560px; //1fr 2fr 3fr;
         align-items: center;
-        padding: 27px 0;
+        padding: 2.7rem 0;
         @media (max-width: $r_desk_1280) {
             grid-template-columns: 72px 450px 300px;
+        }
+        @media (max-width: $r_desk) {
+            grid-template-columns: 72px 379px 247px;
+            padding: 2.1rem 0;
+        }
+        @media (max-width: $r_tab) {
+            grid-template-columns: 47px 315px 220px;
+            padding: 1.9rem 0;
         }
         &_border {
             border-top: $line;
@@ -320,18 +404,18 @@ body {
         @media (max-width: $r_desk_1280) {
             font-size: 2.5rem;
         }
+        @media (max-width: $r_tab) {
+            font-size: 2.2rem;
+        }
     }
     &__description {
         font-size: 1.6rem;
+        @media (max-width: $r_tab) {
+            font-size: 1.4rem;
+        }
     }
 }
 .portfolio {
-    
-    // &__tittle-back {
-    //     background-color: $dark-grey;
-    //     padding-bottom: 8.5rem;
-    //     z-index: 1;
-    // }
     &__tittle {
         position: relative;
         display: inline-block;
@@ -353,6 +437,18 @@ body {
             top: -102%;
             right: -63%;
             z-index: -1;
+            @media (max-width: $r_tab_900) {
+                width: 300px;
+                height: 300px;
+                top: -60%;
+                right: -47%;
+            }
+            @media (max-width: $r_tab) {
+                width: 210px;
+                height: 210px;
+                top: -30%;
+                right: -28%;
+            }
         }
         &-back {
             background-color: $dark-grey;
@@ -360,6 +456,9 @@ body {
             z-index: 1;
             @media (max-width: $r_desk_1280) {
                 padding-bottom: 7.5rem;
+            }
+            @media (max-width: $r_tab_900) {
+                padding-bottom: 1.5rem;
             }
         }
     }
@@ -376,10 +475,16 @@ body {
     &__example {
         display: flex;
         justify-content: space-between;
-    }
-    &__example {
         padding-bottom:5.4rem;
         border-bottom: $line;
+        @media (max-width: $r_desk) {
+            flex-direction: column;
+        } 
+    }
+    &__preview {
+        @media (max-width: $r_desk) {
+            align-self: flex-end;
+        } 
     }
 }
 .gradient {
@@ -394,10 +499,14 @@ body {
     }
     
     &__tittle {
-        padding-top: 11px;
+        padding-top: 1.1rem;
         font-size: 2.8rem;
         font-weight: 700;
         line-height: 150%;
+        @media (max-width: $r_desk) {
+            font-size: 3.5rem;
+            padding-top: .7rem;
+        } 
     }
     &__list {
         padding-left: 0;
@@ -406,18 +515,25 @@ body {
         line-height: 150%;
         font-size: 1.6rem;
         opacity: .8;
+        @media (max-width: $r_desk) {
+            font-size: 2rem;
+        } 
     }
     &__item {
        padding: 4px 0;
     }
     &__time {
-        padding-top: 22px;
+        padding-top: 2.2rem;
         font-weight: 700;
         font-size: 1.6rem;
         line-height: 150%;
         opacity: .8;
         @media (max-width: $r_desk_1280) {
             font-size: 1.4rem;
+        } 
+        @media (max-width: $r_desk) {
+            padding-bottom: 3rem;
+            font-size: 2rem;
         } 
     }
   
@@ -452,6 +568,12 @@ body {
         grid-template-columns: repeat(3, 1fr);
         grid-row-gap: 25.5%;
         grid-column-gap: 2%;
+        @media (max-width: $r_desk) {
+            grid-template-columns: repeat(2, 1fr);
+        } 
+        @media (max-width: $r_tab) {
+            grid-row-gap: 4%;
+        }
     }
     &__item {
         display: grid;
@@ -460,6 +582,9 @@ body {
     }
     &__text {
         margin-left: -44px;
+        @media (max-width: $r_tab) {
+            margin-left: -42px;
+        }
     }
     &__tittle {
         font-weight: 600;
@@ -499,6 +624,13 @@ body {
         @media (max-width: $r_desk_1280) {
             width: 225px;
         }
+        @media (max-width: $r_desk) {
+            width: 175px;
+        }
+        @media (max-width: $r_tab) {
+            width: 150px;
+        }
+        
             &:hover {
                 filter: grayscale(0);
             }
@@ -531,6 +663,9 @@ body {
             padding-bottom: 50px;
             &_c {
                 padding-bottom:  31px;
+                @media (max-width: $r_desk_1280) {
+                    padding-bottom: 12rem;
+                }
             }
         }
         &_s {
@@ -655,6 +790,11 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        @media (max-width: $r_desk) {
+            align-items: center;
+            flex-direction: column-reverse;
+            gap: 6rem;
+        }
     }
     &__social {
         display: flex;
@@ -702,12 +842,13 @@ body {
             z-index: -2;
             left: -53%;
             top: -25%;
-            @media (max-width: $r_desk_1450) {
-                left: 34%;
+            @media (max-width: $r_desk_1580) {
+                left: -55px;
+                top: -77px;
             }
             @media (max-width: $r_desk_1280) {
-                width: 250px;
-                height: 250px;
+                // width: 250px;
+                // height: 250px;
             }
         }
         &::after {
@@ -719,11 +860,14 @@ body {
             top: -3%;
             z-index: -1;
             @media (max-width: $r_desk_1580) {
-                left: 32%;
-                top: 113%;
+                    left: 164px;
+                    top: -118px;
             }
             @media (max-width: $r_desk_1280) {
-                display: none;
+                border: 27px solid rgba(0, 0, 0, 0);
+                border-bottom: 62px solid #F3F2F0;
+                left: 176px;
+                top: -107px;
             }
         }
     }
@@ -890,6 +1034,9 @@ body {
     @media (max-width: $r_desk_1280) {
         padding-bottom: 9rem;
     }
+    @media (max-width: $r_desk) {
+        padding-bottom: 7rem;
+    }
 
   }
   .footer {
@@ -901,6 +1048,10 @@ body {
         font-size: 1.4rem;
         line-height: 150%;
         align-items: center;
+        @media (max-width: $r_desk) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
     }
     &__nav {
         display: flex;
@@ -954,6 +1105,10 @@ body {
         line-height: 150%;
         // opacity: .3;
         color: #535254;
+        @media (max-width: $r_desk) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
     }
     &__author_link {
         font-weight: 400;
