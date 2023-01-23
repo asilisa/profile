@@ -26,12 +26,13 @@
                         <a href="#contact" class="header__link">Обратная связь</a>
                     </li>
                 </ul>
-                <button href="#" class="header__menu"></button>
+                <a href="#" class="header__menu"></a>
             </nav>
             
             <a href="tel:+79237777777" class="header__tel header__link">8 923 777-77-77</a>
             <a href="mailto:alexdev@gmail.com" class="header__mail header__link">alexdev@gmail.com</a>
-        </header>             
+        </header>
+
 <section class="profile">
     <div class="container">
         <div class="profile__picture">
@@ -354,6 +355,88 @@
     </div>
 </div>
 </footer>
-</div>    
+</div> 
+<div class="popup">
+    <div class="popup__contact active">
+        <a href="#" class="popup__close"><img src="./images/close.png" alt=""></a>
+        <div class="popup__contact__header">
+            <h3 class="popup__tittle">Расскажите о своем проекте</h3>
+            <p class="popup__text">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+        </div>
+        <div class="popup__box">
+            <p class="popup__box__text">Телефон или почта</p>
+            <input type="text" class="popup__input" placeholder="Введите телефон">
+            <p class="popup__box__text popup__box__text_2">Выберите удобный способ связи</p>
+            
+            <div class="popup__form">
+                <label class="popup__drop">
+                    <input type="checkbox" id="popup__drop__connect">
+                    <span class="popup__control">Telegram</span>
+                    <img class="popup__arrow_down" src="./images/arrow_down.svg" alt=""> 
+                    <ul class="popup__drop__list">
+                        <img class="popup__arrow_up" src="./images/arrow_up.svg" alt="">
+                        <li class="popup__drop__item">Telegram</li>
+                        <li class="popup__drop__item">WhatsApp</li>
+                        <li class="popup__drop__item">Звонок на телефон</li>
+                        <li class="popup__drop__item">SMS сообщение</li>
+                    </ul>
+                    <label for="popup__drop__connect" class="popup__overlay-close"></label>
+                </label>
+            </div>
+            <input type="submit" class="popup__form__sub">
+        </div>
+    </div>
+</div> 
+<div class="popup__menu">
+    <div class="popup__menu-mob active">
+        <ul class="popup__nav">
+            <a href="#" class="popup__menu-close"><img src="./images/close.png" alt=""></a>
+            <li class="popup__nav__item">
+                <a href="#about" class="popup__nav__link">Обо мне</a>
+            </li>
+            <li class="popup__nav__item">
+                <a href="#portfolio" class="popup__nav__link">Портфолио</a>
+            </li>
+            <li class="popup__nav__item">
+                <a href="#stages" class="popup__nav__link">Этапы работ</a>
+            </li>
+            <li class="popup__nav__item">
+                <a href="#prices" class="popup__nav__link">Цены</a>
+            </li>
+            <li class="popup__nav__item">
+                <a href="#contact" class="popup__nav__link">Обратная связь</a>
+            </li>
+        </ul>
+        <div class="popup__footer">
+            <div class="popup__contacts">
+                <a class="popup__contacts popup__contacts_tel" class href="tel:+79237777777">8 923 777-77-77</a>
+                <a class="popup__contacts popup__contacts_mail" href="mailto:alexdev@gmail.com">alexdev@gmail.com</a>
+            </div>
+            <ul class="popup__contacts__social">
+                <li class="popup__contacts__social_vk"><a href="#" class="popup__contacts__link">Vk</a></li>
+                <li class="popup__contacts__social_ig"><a href="#" class="popup__contacts__link">Instagram</a></li>
+                <li class="popup__contacts__social_Ldn" ><a href="#" class="popup__contacts__link">Linkedin</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('.profile__link').on('click', function(){
+        $('.popup').addClass('active');
+    });
+
+    $('.popup__close').on('click', function(){
+        $('.popup').removeClass('active');
+    });
+
+    $('.header__menu').on('click', function(){
+        $('.popup__menu').addClass('active');
+    });
+
+    $('.popup__menu-close').on('click', function(){
+        $('.popup__menu').removeClass('active');
+    });
+</script>
 </body>
 </html>
