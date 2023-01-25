@@ -754,6 +754,7 @@ body {
     &__tittle {
         position: relative;
         display: inline-block;
+        padding-top: 5px;
         font-size: 7.4rem;
         font-weight: 700;
         line-height: 90px;
@@ -776,7 +777,7 @@ body {
             border-radius: 100%;
             background: $red;
             position: absolute;
-            top: -102%;
+            top: -90%;
             right: -63%;
             z-index: -1;
             @media (max-width: $r_tab_900) {
@@ -988,7 +989,8 @@ body {
 }
 .advantage {
     padding-top: 63px;
-    padding-bottom: 200px;
+    padding-bottom: 180px;;
+    box-sizing: border-box;
     @media (max-width: $r_tab_650) {
         padding-bottom: 100px;
     }
@@ -997,13 +999,16 @@ body {
     }
     @media (max-width: $r_mob400) {
         padding-top: 27px;
+        
+        width: 340px;
     }
     &__grid {
         padding-left: 3px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-row-gap: 25.5%;
+        grid-row-gap: 17.5%;
         grid-column-gap: 2%;
+        box-sizing: border-box;
         @media (max-width: $r_desk) {
             grid-template-columns: repeat(2, 1fr);
         } 
@@ -1021,26 +1026,34 @@ body {
         @media (max-width: $r_mob400) {
             grid-template-columns: 340px;
             grid-row-gap: 7px;
+            padding-left: 9px;
         }
     }
     &__item {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        box-sizing: border-box;
+        width: 100%;
+        // grid-template-columns: 1fr 2fr;
+        grid-template-columns: 78px 240px;
         align-items: center; 
         @media (max-width: $r_tab_650) {
-            grid-template-columns: 98px 330px;
+            grid-template-columns: 45px 240px;
             grid-column-gap: 15%;
+            width: 500px;
+        }
+        @media (max-width: $r_mob530) {
+            width: 450px;
+        }
+        @media (max-width: $r_mob480) {
+            width: 380px;
         }
         @media (max-width: $r_mob400) {
-            grid-column-gap: 3%;
+            grid-column-gap: 0%;
+            grid-template-columns: 67px 240px;
+            width: 340px;
         }
     }
-    &__text {
-        margin-left: -44px;
-        @media (max-width: $r_tab) {
-            margin-left: -42px;
-        }
-    }
+    
     &__tittle {
         font-weight: 600;
         font-size: 1.6rem;
@@ -1071,6 +1084,7 @@ body {
 .tools {
     padding-top: 1.4rem;
     padding-bottom: 5rem;
+    z-index: 0;
     @media (max-width: $r_desk_1280) {
         padding-top: 0;
         padding-bottom: 3rem;
@@ -1083,11 +1097,13 @@ body {
         grid-gap: 0px;
     }
     &__item {
-
+        display:inline-block;
+        position: relative;
         margin: 0;
         width: 286px;
         height: 148px;
         padding: 0;
+        z-index: 0;
         filter: grayscale(1);
         transition: .3s;
         @media (max-width: $r_desk_1280) {
@@ -1133,6 +1149,7 @@ body {
     &__img {
         display:block;
         margin: 35px auto;
+        z-index: 0;
         @media (max-width: $r_tab_650) {
             width: 35px;
             height: 38px;
@@ -1151,6 +1168,37 @@ body {
         
     }
 }
+.tooltip-text {
+  visibility: hidden;
+  width: 232px;
+  background-color: red;
+  color: rgba($light-grey, .8);
+  font-size: 10px;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 5;
+  top: 143px;
+  left: 26px;
+  &::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent red transparent;
+  }
+  &__text {
+    padding-top: 5px;
+  }
+}
+.tools__item:hover .tooltip-text {
+    visibility: visible;
+  }
+
+
 .prices {
     padding-top: 62px;
     display:relative;
