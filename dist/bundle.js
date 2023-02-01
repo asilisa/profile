@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("Загрузилась новая версия")})();
+(()=>{"use strict";console.log("Поменяла h2-h3")})();

@@ -1,3 +1,3 @@
 import './styles/main.scss'
 
-console.log('Загрузилась новая версия');
+console.log('Поменяла h2-h3');
