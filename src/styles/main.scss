@@ -1084,7 +1084,7 @@ body {
 .tools {
     padding-top: 1.4rem;
     padding-bottom: 5rem;
-    z-index: 0;
+    // z-index: 0;
     @media (max-width: $r_desk_1280) {
         padding-top: 0;
         padding-bottom: 3rem;
@@ -1143,11 +1143,13 @@ body {
             
         &_r1 {
             border: $line;
+            z-index: 2;
         }
         &_r2 {
             border-bottom: $line;
             border-left: $line;
             border-right: $line;
+            z-index: 1;
         }
     }
     &__img {
@@ -2437,3 +2439,4 @@ body {
     opacity: 1;
     visibility: visible;
   }
+
